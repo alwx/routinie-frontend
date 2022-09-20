@@ -11,7 +11,7 @@ Routinie [was originally launched](https://www.producthunt.com/products/routinie
 ## Why the sources can be interesting?
 
 1. It's a nice example of a TypeScript app that works with a backend and uses [Redux Toolkit](https://redux-toolkit.js.org) (which still seems to be not very popular and commonly used in 2022).
-1. I am personally proud of my custom component for context menu which does proper position and allows deep customization.
+1. I'm personally proud of my custom component for the context menu, which does proper positioning and allows for deep customization.
 1. The code for trackers and tracker events (including streak detection, "fulfillment" and all the related concepts) is also pretty nice. This code is also covered by tests (check `tests/utils/trackers.test.ts`).
 
 ## Development
