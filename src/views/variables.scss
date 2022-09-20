@@ -1,0 +1,66 @@
+// default palette
+$white: #ffffff;
+$white-2p: rgba(255, 255, 255, 0.025);
+$white-5p: rgba(255, 255, 255, 0.05);
+$white-10p: rgba(255, 255, 255, 0.1);
+$white-15p: rgba(255, 255, 255, 0.15);
+$white-30p: rgba(255, 255, 255, 0.3);
+$white-50p: rgba(255, 255, 255, 0.5);
+$white-80p: rgba(255, 255, 255, 0.8);
+$white-90p: rgba(255, 255, 255, 0.9);
+
+$grey-dark: #ece9e6;
+
+$black: rgba(0, 0, 0, 1);
+$black-2p: rgba(0, 0, 0, 0.025);
+$black-5p: rgba(0, 0, 0, 0.05);
+$black-10p: rgba(0, 0, 0, 0.1);
+$black-20p: rgba(0, 0, 0, 0.2);
+$black-30p: rgba(0, 0, 0, 0.3);
+$black-50p: rgba(0, 0, 0, 0.5);
+$black-80p: rgba(0, 0, 0, 0.8);
+$mild-black: #212121;
+
+$yellow-20p: rgba(255, 153, 0, 0.4);
+$red-20p: rgba(255, 0, 0, 0.2);
+$red: rgba(220, 50, 50, 1);
+$dark-red: rgba(180, 0, 0, 1);
+$darker-red: rgba(120, 0, 0, 1);
+
+// width
+$button-height: 2.4rem;
+$max-width: 1000px;
+$cell-width: 6%;
+$title-cell-width: 22%;
+$cell-height: 42px;
+
+// sizes
+$icon-size: 16px;
+$input-border-width: 0.05rem;
+$border-width: 0.1rem;
+
+$font-size-xs: 8pt;
+$font-size-s: 11pt;
+$font-size-m: 12pt;
+$font-size-l: 14pt;
+$font-size-xl: 18pt;
+$font-size-xxl: 24pt;
+
+$line-height-xxs: 12pt;
+$line-height-xs: 14pt;
+$line-height-s: 16pt;
+$line-height-m: 18pt;
+$line-height-l: 22pt;
+$line-height-xl: 26pt;
+
+$spacing-xs: 0.25rem;
+$spacing-s: $spacing-xs * 2;
+$spacing-m: $spacing-s * 2;
+$spacing-l: $spacing-m * 2;
+$spacing-xl: $spacing-l * 2;
+
+$border-radius: 0;
+
+// fonts
+$default-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+$mono-font-family: "IBM Plex Mono", monospace;

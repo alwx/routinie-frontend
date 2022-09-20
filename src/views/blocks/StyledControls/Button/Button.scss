@@ -1,0 +1,115 @@
+@import "../../../variables.scss";
+
+.button {
+  font-family: $default-font-family;
+  font-size: $font-size-m;
+  line-height: $line-height-s;
+  background: $red;
+  color: $white;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  padding: $spacing-s ($spacing-s + $spacing-xs);
+  margin: 0;
+  border-radius: $border-radius !important;
+  transition: all 150ms;
+
+  &:hover:not(:disabled) {
+    background: $dark-red;
+    color: $white;
+  }
+
+  &:disabled {
+    background: $black-30p;
+  }
+
+  &--small {
+    padding: $spacing-xs ($spacing-s + $spacing-xs);
+  }
+}
+
+.button--close {
+  background: $black-5p;
+  color: $black-50p;
+
+  &:hover:not(:disabled) {
+    background: $black-20p;
+    color: $black-80p;
+  }
+}
+
+.button--link {
+  color: $dark-red;
+  background: transparent;
+  text-decoration: underline;
+
+  &:hover:not(:disabled) {
+    color: $red;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    color: $black-30p;
+  }
+}
+
+.button--contrast {
+  background: $white-80p;
+  color: $dark-red;
+
+  &:hover:not(:disabled) {
+    background: $white;
+    color: $darker-red;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    background: $dark-red;
+    color: $white-80p;
+
+    &:hover:not(:disabled) {
+      background: $darker-red;
+      color: $white;
+    }
+
+    &:disabled {
+      background: $black-10p;
+    }
+  }
+
+  .button--close {
+    background: $black-20p;
+    color: $white-30p;
+
+    &:hover:not(:disabled) {
+      background: $black-30p;
+      color: $white-80p;
+    }
+  }
+
+  .button--link {
+    color: $red;
+    background: transparent;
+
+    &:hover:not(:disabled) {
+      color: $dark-red;
+      background: transparent;
+    }
+
+    &:disabled {
+      color: $white-50p;
+    }
+  }
+
+  .button--contrast {
+    background: $white-80p;
+    color: $dark-red;
+
+    &:hover:not(:disabled) {
+      background: $white;
+      color: $darker-red;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../variables.scss";
+
+.expandable-container {
+  border-bottom: $border-width solid $black-10p;
+  margin-bottom: $spacing-m;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: $black-2p;
+    color: $black-80p;
+    fill: $black-50p;
+    cursor: pointer;
+    transition: all 150ms;
+    text-decoration: underline;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: none;
+      background: $black-5p;
+      color: $black;
+      fill: $black;
+    }
+  }
+
+  &__title-text {
+    flex: 1;
+    padding: $spacing-m;
+  }
+
+  &__title-icon {
+    width: $icon-size;
+    min-width: $icon-size;
+    height: $icon-size;
+    opacity: 0.5;
+    margin: 0 $spacing-m;
+  }
+
+  &__content {
+    background: $black-2p;
+    padding: $spacing-m;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    .styled-label,
+    .checkbox-container {
+      margin-top: $spacing-m;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--expanded {
+    .expandable-container__title-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .expandable-container {
+    border-bottom: $border-width solid $white-5p;
+
+    &__title {
+      background: $white-2p;
+      color: $white-50p;
+      fill: $white-50p;
+
+      &:hover {
+        background: $white-5p;
+        color: $white-80p;
+        fill: $white-80p;
+      }
+    }
+
+    &__content {
+      background: $white-2p;
+    }
+  }
+}

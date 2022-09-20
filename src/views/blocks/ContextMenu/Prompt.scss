@@ -1,0 +1,73 @@
+@import "../../variables.scss";
+
+.prompt {
+  display: flex;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  padding: $spacing-s ($spacing-m + $spacing-s);
+  flex-direction: column;
+
+  &__title {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin-bottom: $spacing-m;
+  }
+
+  &__text {
+    color: $black-50p;
+    margin-bottom: $spacing-m;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__state-message {
+    padding: 0;
+    margin-bottom: $spacing-s;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+
+    &--error {
+      color: $red;
+    }
+
+    &--info {
+      color: $black-80p;
+    }
+  }
+
+  &__custom-content {
+    margin-bottom: $spacing-m;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__buttons {
+    button {
+      margin-right: $spacing-s;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .prompt {
+    &__text {
+      color: $white-50p;
+    }
+
+    &__state-message {
+      &--error {
+        color: $red;
+      }
+
+      &--info {
+        color: $white-80p;
+      }
+    }
+  }
+}

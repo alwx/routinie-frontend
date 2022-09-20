@@ -1,0 +1,92 @@
+@import "../../../variables.scss";
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  min-height: 24px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .checkbox__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__label {
+    display: block;
+    margin-left: $spacing-s;
+    position: relative;
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+  }
+
+  &:hover .checkbox__input ~ .checkbox__checkmark {
+    background-color: $black-5p;
+  }
+
+  .checkbox__input:checked ~ .checkbox__checkmark {
+    background-color: $red;
+  }
+
+  .checkbox__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: $black-2p;
+    border: $input-border-width solid $black-10p;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+
+  .checkbox__checkmark:after {
+    left: 8px;
+    top: 5px;
+    width: 6px;
+    height: 10px;
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* Show the checkmark when checked */
+  .checkbox__input:checked ~ .checkbox__checkmark:after {
+    display: block;
+  }
+
+  .checkbox__input:focus ~ .checkbox__checkmark {
+    border-color: $red;
+    box-shadow: 0 0 2px $red;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .checkbox {
+    &:hover .checkbox__input ~ .checkbox__checkmark {
+      background-color: $white-10p;
+    }
+
+    .checkbox__input:checked ~ .checkbox__checkmark {
+      background-color: $dark-red;
+    }
+
+    .checkbox__checkmark {
+      background-color: $white-5p;
+      border: $input-border-width solid $white-10p;
+    }
+  }
+}

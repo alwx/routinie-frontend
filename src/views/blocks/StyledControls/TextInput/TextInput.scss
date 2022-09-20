@@ -1,0 +1,34 @@
+@import "../../../variables.scss";
+
+.text-input {
+  flex: 1;
+  font-size: $font-size-m;
+  background: $white;
+  border: $input-border-width solid $black-10p;
+  padding: $spacing-s ($spacing-m - $input-border-width);
+  color: $black;
+  margin: 0;
+  outline: none;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    border-color: $red;
+    box-shadow: 0 0 2px $red;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-input {
+    background: $mild-black;
+    border: $input-border-width solid $white-15p;
+    color: $white-80p;
+
+    &:focus {
+      border-color: $dark-red;
+      box-shadow: 0 0 2px $dark-red;
+    }
+  }
+}

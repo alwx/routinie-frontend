@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+
+$block-width: 600px;
+
+.public {
+  &__content {
+    margin-bottom: $spacing-l;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-m;
+  }
+
+  &__details {
+    width: 100%;
+    max-width: $block-width;
+    margin-top: $spacing-l;
+  }
+
+  &__info {
+    margin-top: $spacing-m;
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+    color: $black-50p;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    code {
+      font-size: $font-size-s;
+      padding: 0;
+      border-radius: $spacing-xs;
+      color: $black-80p;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .public {
+    &__info {
+      color: $white-50p;
+    }
+  }
+}

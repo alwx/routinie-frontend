@@ -1,0 +1,62 @@
+@import "../../../variables.scss";
+
+.color-picker {
+  &__link {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: $dark-red;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+      text-decoration: none;
+    }
+
+    &--disabled {
+      text-decoration: none;
+      color: $black-50p;
+    }
+  }
+
+  &__color {
+    width: 24px;
+    height: 24px;
+    border: $input-border-width solid $black-20p;
+    display: inline-block;
+  }
+
+  &__change-text {
+    margin-left: $spacing-s;
+  }
+
+  &__popover {
+    position: absolute;
+    z-index: 100;
+    margin-left: -9px;
+  }
+
+  &__picker {
+    margin-top: 4px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .color-picker {
+    &__link {
+      color: $red;
+
+      &:hover {
+        color: $dark-red;
+      }
+    }
+
+    &__color {
+      border: $input-border-width solid $white-10p;
+    }
+  }
+}

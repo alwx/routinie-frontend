@@ -1,0 +1,112 @@
+@import "../../variables.scss";
+
+.control-bar {
+  font-size: $font-size-s;
+  padding: $spacing-m;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    width: 100%;
+    max-width: $max-width;
+    border-radius: $border-radius;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__right {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    font-family: $default-font-family !important;
+    color: $black-50p;
+    font-size: $font-size-s;
+    line-height: $line-height-xs;
+    outline: none;
+    height: $button-height;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: $border-radius;
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+
+    &:not(:disabled):hover {
+      background: $black-2p;
+      color: $black-80p;
+    }
+
+    &--user {
+      padding: $spacing-s $spacing-m;
+
+      @media (max-width: 800px) {
+        padding: $spacing-s $spacing-m;
+
+        .control-bar__pro {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__menu-icon {
+    display: inline;
+    width: $icon-size;
+    height: $icon-size;
+  }
+
+  &__exclamation-icon {
+    margin-left: $spacing-s;
+    width: $icon-size;
+    height: $icon-size;
+    display: block;
+  }
+
+  &__spinner {
+    height: $button-height;
+    padding: $spacing-s $spacing-m;
+    display: flex;
+    align-items: center;
+
+    &--alone {
+      margin-right: $spacing-m;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .control-bar {
+    &__button {
+      color: $white-50p;
+
+      &:not(:disabled):hover {
+        background: $white-2p;
+        color: $white-80p;
+      }
+    }
+
+    &__menu-icon {
+      fill: $white-80p;
+    }
+  }
+}

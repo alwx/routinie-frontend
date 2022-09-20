@@ -1,0 +1,68 @@
+@import "../../variables.scss";
+
+.user-page {
+  &__content {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-m;
+  }
+
+  &__header-content {
+    width: 100%;
+    max-width: $max-width;
+    padding: $spacing-m;
+    margin: 0;
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    display: inline-block;
+    font-size: $font-size-xxl;
+    line-height: $line-height-xl;
+    border-bottom: 3px solid $red;
+  }
+
+  &__subtitle {
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+    margin-top: $spacing-m;
+  }
+
+  &__trackers {
+    margin-bottom: $spacing-l;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-m;
+    overflow: auto;
+
+    @media (max-width: $max-width) {
+      align-items: start;
+    }
+  }
+
+  &__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: $spacing-m;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .user-page {
+    &__subtitle {
+      a {
+        color: $red;
+      }
+    }
+  }
+}

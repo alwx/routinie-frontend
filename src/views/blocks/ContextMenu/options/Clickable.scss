@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+
+.clickable {
+  color: $black;
+  font-size: $font-size-s;
+  line-height: $line-height-xs;
+  padding: $spacing-s ($spacing-m + $spacing-s);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 150ms;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--selected {
+    font-weight: 600;
+  }
+
+  &__description {
+    color: $black-50p;
+    font-size: $font-size-xs;
+    line-height: 12pt;
+    margin-top: $spacing-xs;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label-icon {
+    margin-left: $spacing-s;
+    width: $icon-size;
+    height: $icon-size;
+    display: inline-block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .clickable {
+    color: $white-80p;
+  }
+}

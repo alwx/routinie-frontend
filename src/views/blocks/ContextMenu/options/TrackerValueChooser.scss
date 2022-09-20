@@ -1,0 +1,20 @@
+@import "../../../variables.scss";
+
+.tracker-value-chooser {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0 !important;
+  margin-bottom: $spacing-m;
+  user-select: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &__item {
+    cursor: pointer;
+    height: $cell-height;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

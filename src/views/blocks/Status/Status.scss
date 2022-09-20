@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+.status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $dark-red;
+  display: inline-block;
+
+  &--white {
+    background: $white-50p;
+    margin-right: $spacing-s;
+  }
+
+  &--error {
+    background: $red-20p;
+  }
+}

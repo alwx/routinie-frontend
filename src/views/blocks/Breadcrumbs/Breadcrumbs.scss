@@ -1,0 +1,63 @@
+@import "../../variables.scss";
+
+.breadcrumbs {
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  // nothing yet
+}
+
+.breadcrumbs-button {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  outline: none;
+  padding: 0 $spacing-m;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: underline;
+  transition: all 150ms;
+
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.breadcrumbs-arrow {
+  display: flex;
+  align-items: center;
+  cursor: default;
+
+  &:last-child {
+    display: none;
+  }
+}
+
+.breadcrumbs-icon {
+  width: $icon-size;
+  min-width: $icon-size;
+  height: $icon-size;
+  opacity: 0.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .breadcrumbs-icon {
+    fill: $white-50p;
+  }
+}

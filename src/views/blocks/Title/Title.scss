@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  &--transparent {
+    background: transparent;
+  }
+}

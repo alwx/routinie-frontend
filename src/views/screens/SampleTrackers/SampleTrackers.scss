@@ -1,0 +1,90 @@
+@import "../../variables.scss";
+
+$block-width: 600px;
+
+.sample-trackers {
+  &__content {
+    margin-bottom: $spacing-l;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-m;
+  }
+
+  &__block-add {
+    width: 100%;
+    max-width: $block-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: $spacing-l;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__block-suggestions {
+    width: 100%;
+    max-width: $block-width;
+    padding: 0;
+    margin: $spacing-xl 0 0 0;
+    list-style-type: none;
+  }
+}
+
+.suggestion {
+  padding: $spacing-s $spacing-m;
+  border-bottom: $border-width solid transparent;
+  cursor: pointer;
+
+  &__title {
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    color: $black-50p;
+  }
+
+  &:hover {
+    background: $black-2p;
+    border-bottom: $border-width solid $black-5p;
+  }
+
+  &--highlighted {
+    font-style: italic;
+
+    .suggestion__title {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .sample-trackers {
+    .suggestion {
+      &__title {
+        color: $white-80p;
+      }
+
+      &__description {
+        color: $white-50p;
+      }
+
+      &:hover {
+        background: $white-2p;
+        border-bottom: $border-width solid $white-5p;
+      }
+    }
+  }
+}

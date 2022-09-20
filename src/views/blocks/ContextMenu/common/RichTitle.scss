@@ -1,0 +1,16 @@
+@import "../../../variables.scss";
+
+.rich-title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: $spacing-m;
+  align-items: flex-start;
+
+  &__title {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    padding-top: 0.2em;
+    flex: 1;
+    margin-right: 0.2em;
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../variables.scss";
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.context-menu__container {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1000000;
+  position: fixed;
+  animation: fadein 0.1s;
+
+  &--centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $black-5p;
+    position: fixed;
+  }
+}
+
+.context-menu__block {
+  max-width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px $black-10p;
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  &--centered {
+  }
+}
+
+.context-menu__content {
+  background: $white;
+  // also used as a number in ContextMenuContainer.js, don't forget to modify it there as well!
+  max-height: 550px;
+  overflow: auto;
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: $border-width * 2;
+    height: $border-width * 2;
+    background: $black-20p;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $black-30p;
+  }
+
+  & > div:first-child {
+    padding-top: $spacing-m + $spacing-s;
+  }
+
+  & > div:last-child {
+    padding-bottom: $spacing-m + $spacing-s;
+  }
+}
+
+.separator {
+  margin: $spacing-s 0;
+  border-bottom: solid 1px $black-5p;
+}
+
+@media (prefers-color-scheme: dark) {
+  .context-menu__block {
+    box-shadow: 0 10px 20px $black-30p;
+
+    ::-webkit-scrollbar-thumb {
+      background-color: $white-30p;
+    }
+  }
+
+  .context-menu__content {
+    background: $mild-black;
+
+    ::-webkit-scrollbar-thumb {
+      background-color: $white-30p;
+    }
+  }
+
+  .separator {
+    margin: $spacing-s 0;
+    border-bottom: solid 1px $white-5p;
+  }
+}

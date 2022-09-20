@@ -1,0 +1,63 @@
+@import "../../variables.scss";
+
+$narrow-content-width: 600px;
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 $spacing-m;
+
+  &__ul {
+    width: 100%;
+    max-width: $max-width;
+    padding: $spacing-m;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    color: $black-20p;
+    list-style: none;
+  }
+
+  &__li {
+    display: inline-block;
+
+    &::before {
+      margin: 0 $spacing-s;
+      content: "\2022";
+    }
+
+    &:first-child {
+      &::before {
+        margin: 0;
+        content: "";
+      }
+    }
+  }
+
+  a {
+    color: $black-30p;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--narrow {
+    .footer__ul {
+      max-width: $narrow-content-width;
+      padding: $spacing-m $spacing-l;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    &__ul {
+      color: $white-15p;
+    }
+    a {
+      color: $white-30p;
+    }
+  }
+}

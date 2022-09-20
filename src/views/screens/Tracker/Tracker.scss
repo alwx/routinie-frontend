@@ -1,0 +1,84 @@
+@import "../../variables.scss";
+
+$block-width: 600px;
+
+.tracker {
+  &__content {
+    margin-bottom: $spacing-l;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-m;
+  }
+
+  &__details {
+    width: 100%;
+    max-width: $block-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: $spacing-l;
+  }
+
+  &__columns {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column-basic {
+    background: $black-2p;
+    border-bottom: $border-width solid $black-10p;
+    padding: $spacing-m;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column-additional {
+    margin-top: $spacing-m;
+  }
+
+  &__buttons {
+    margin: $spacing-s $spacing-m 0 $spacing-m;
+    display: flex;
+    flex-direction: row;
+
+    .button {
+      margin-left: $spacing-s;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__buttons-left {
+    flex: 1;
+  }
+}
+
+.two-line-label {
+  &__text {
+    color: $black-50p;
+    margin-top: $spacing-xs !important;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .tracker {
+    &__column-basic {
+      background: $white-2p;
+      border-bottom: $border-width solid $white-5p;
+    }
+  }
+
+  .two-line-label {
+    &__text {
+      color: $white-30p;
+    }
+  }
+}
