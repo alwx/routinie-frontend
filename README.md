@@ -21,3 +21,7 @@ It's a regular TypeScript project that uses Yarn. Just set the env variables (`.
 ## Production
 
 Run `make build-frontend` to build the frontend. Make sure all the required variables are set in `.env.production`.
+
+## License
+
+[MIT License](./LICENSE.txt)
